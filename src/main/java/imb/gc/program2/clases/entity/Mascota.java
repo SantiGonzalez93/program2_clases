@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Mascota {
 
 @Id
-@GeneratedValue(strategy-GenerationType.IDENTITY)
+@GeneratedValue(strategy=GenerationType.IDENTITY)
 private int id;	
 private String nombre;
 private String raza;
