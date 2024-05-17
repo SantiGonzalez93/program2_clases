@@ -11,7 +11,7 @@ public class Mascota {
 
 @Id
 @GeneratedValue(strategy=GenerationType.IDENTITY)
-private int id;	
+private long id;	
 private String nombre;
 private String raza;
 private int edad;
@@ -42,7 +42,7 @@ public void setPeludo(boolean peludo) {
 	this.peludo = peludo;
 }
 
-public int getId() {
+public Long getId() {
 	return id;
 }
 public void setId(int id) {

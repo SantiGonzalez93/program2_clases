@@ -8,6 +8,7 @@ import imb.gc.program2.clases.entity.Mascota;
 public class MascotaService {
 	
 	public List<Mascota> getTresMascotas () {
+		
 		List<Mascota> lsMascota = new ArrayList<Mascota>();
 		
 		Mascota mascota1 = new Mascota();
