@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import imb.gc.program2.clases.entity.Mascota;
 import imb.gc.program2.clases.service.IMascotaService;
-import imb.gc.program2.clases.service.MascotaService;
+import imb.gc.program2.clases.service.jpa.MascotaService;
 
 @RestController
 public class MascotaController {

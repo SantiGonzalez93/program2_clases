@@ -1,4 +1,4 @@
-package imb.gc.program2.clases.service;
+package imb.gc.program2.clases.service.jpa;
 
 import java.util.ArrayList;
 import java.util.List;
