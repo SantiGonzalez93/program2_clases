@@ -23,13 +23,8 @@ public class PokemonServiceImpl implements IPokemonService {
 
 	@Override
 	public Pokemon getById(Long id) {
-		Optional<Pokemon> optional;
-		optional = repo.findById(id);
-		if (optional.isPresent()) {
-			return optional.get();
-		}else {
-			return null;
-		}
+		
+		return repo.findById(id).orElse(null);
 		
 	}
 
