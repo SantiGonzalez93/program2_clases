@@ -24,14 +24,14 @@ public class PokemonController {
 	
 	@GetMapping("/pokemon")
 	public List<Pokemon> obtenerTodosLosPokemones(){
-		List<Pokemon> pokemones = service.getAll();
-		return pokemones;	
+		return service.getAll();
+			
 	}
 	
 	@GetMapping("/pokemon/{id}")
 	public Pokemon obtenerPokemonPorId (@PathVariable("id")long id) {
-		Pokemon pokemon = service.getById(id);
-		return pokemon;
+		return  service.getById(id);
+		
 	}
 	
 	@PostMapping("/pokemon")
@@ -39,26 +39,11 @@ public class PokemonController {
 		return service.save(pokemon);
 	}
 	
-	@PutMapping("/actualizarPokemon/{id}")
-	public Pokemon actualizarPokemon (@PathVariable long id,  @RequestBody Pokemon pokemon) {
-		
-		Pokemon pokemonViejo = service.getById(id);
-		
-		if (pokemonViejo != null) {
-			pokemonViejo.setAtaque(pokemon.getAtaque());
-			pokemonViejo.setColor(pokemon.getColor());
-			pokemonViejo.setGeneracion(pokemon.getGeneracion());
-			pokemonViejo.setNombre(pokemon.getNombre());
-			pokemonViejo.setTerritorio(pokemon.getTerritorio());
-			pokemonViejo.setPrevia(pokemon.getPrevia());
-			pokemonViejo.setProxima(pokemon.getProxima());
-			pokemonViejo.setTipo(pokemon.getTipo());
-			return service.save(pokemonViejo);
-			
-		}else {
-			return null;
-		}
+	@PutMapping("/actualizarPokemon")
+	public Pokemon actualizarPokemon (@RequestBody Pokemon pokemon) {
 	
+			return service.save(pokemon);
+				
 	}
 
 	

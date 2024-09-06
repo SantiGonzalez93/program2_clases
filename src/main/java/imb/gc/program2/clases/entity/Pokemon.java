@@ -17,8 +17,8 @@ public class Pokemon {
 	private String territorio;
 	private int generacion;
 	
-	@ManyToOne
-	private TipoPokemon tipo;
+	//@ManyToOne
+	//private TipoPokemon tipo;
 	private String ataque;
 	private String color;
 	
@@ -72,15 +72,15 @@ public class Pokemon {
 		this.color = color;
 	}
 	
-	private void test() {
-		this.tipo.setNombre(nombre);
+	private void test(String nombre) {
+		this.nombre = nombre;
 	}
-	public TipoPokemon getTipo() {
+	/*public TipoPokemon getTipo() {
 		return tipo;
 	}
 	public void setTipo(TipoPokemon tipo) {
 		this.tipo = tipo;
-	}
+	}*/
 	
 	
 	
