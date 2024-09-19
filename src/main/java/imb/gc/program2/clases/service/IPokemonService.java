@@ -12,5 +12,6 @@ public interface IPokemonService {
 	public abstract List <Pokemon> getAll();
 	public abstract  Pokemon getById(Long id);
 	public abstract Pokemon save(Pokemon pokemon);
-	//public abstract delete();
+	public abstract void delete(Long id);
+	public boolean existe(Long id);
 }

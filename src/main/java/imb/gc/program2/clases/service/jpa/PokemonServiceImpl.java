@@ -33,6 +33,20 @@ public class PokemonServiceImpl implements IPokemonService {
 		 return repo.save(pokemon);
 		 
 	}
+
+	@Override
+	public boolean existe(Long id) {
+		if (id == null) {
+			return false;
+		}else {	
+		return repo.existsById(id);}	
+	}
+
+	@Override
+	public void delete(Long id) {
+		repo.deleteById(id);
+		
+	}
 	
 	
 
